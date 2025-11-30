@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoanFlow - Loan Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="LF.css">
+
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h1>LoanFlow</h1>
+                    </div>
+                    
+                    <nav>
+                        <ul>
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="user-actions">
+                        <button class="btn btn-primary" id="login-scroll-btn">Login</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Streamline Your Loan Management Process</h1>
+                <p>LoanFlow is a comprehensive loan management platform that simplifies the entire loan lifecycle for lenders, borrowers, and financial analysts.</p>
+                <button class="btn btn-primary" id="learn-more-btn">Learn More</button>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose LoanFlow?</h2>
+                    <p>Our platform offers a complete solution for managing loans from application to repayment</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Secure Platform</h3>
+                        <p>Bank-level security to protect your financial data and transactions</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Fast Processing</h3>
+                        <p>Automated workflows that reduce loan processing time by up to 70%</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Advanced Analytics</h3>
+                        <p>Comprehensive reporting and risk analysis tools for better decision making</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="features" id="services" style="background-color: #f5f7fa;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Services</h2>
+                    <p>Tailored solutions for every stakeholder in the loan ecosystem</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>For Lenders</h3>
+                        <p>Create loan offers, track applications, manage repayments, and monitor portfolio performance</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>For Borrowers</h3>
+                        <p>Browse loan offers, submit applications, track status, and manage repayments easily</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>For Analysts</h3>
+                        <p>Access comprehensive data, generate reports, and perform risk analysis</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Section -->
+        <section class="login-section" id="login">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Login to Your Account</h2>
+                    <p>Access your personalized dashboard based on your role</p>
+                </div>
+                
+                <div class="login-container">
+                    <div class="login-box">
+                        <div class="login-logo">
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <h1>LoanFlow</h1>
+                            <p>Loan Management System</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="user-role">Select Your Role</label>
+                            <select id="user-role">
+                                <option value="lender">Lender</option>
+                                <option value="borrower">Borrower</option>
+                                <option value="admin">Admin</option>
+                                <option value="analyst">Financial Analyst</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="user-email">Email</label>
+                            <input type="email" id="user-email" placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="user-password">Password</label>
+                            <input type="password" id="user-password" placeholder="Enter your password">
+                        </div>
+                        
+                        <button class="btn btn-primary" id="login-btn" style="width: 100%;">Login</button>
+                        
+                        <p style="margin-top: 15px; font-size: 0.9rem; color: #777; text-align: center;">
+                            Demo credentials: role@loanflow.com / role123 (e.g., lender@loanflow.com / lender123)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="features" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with our team for any inquiries or support</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Our Location</h3>
+                        <p>123 Finance Street, New York, NY 10001</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone Number</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Address</h3>
+                        <p>info@loanflow.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>LoanFlow</h3>
+                        <p>Streamlining loan management for lenders and borrowers with transparency and efficiency.</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Finance St, New York, NY</li>
+                            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                            <li><i class="fas fa-envelope"></i> info@loanflow.com</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2023 LoanFlow. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Main Application (Initially Hidden) -->
+    <div id="app-container" class="hidden">
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h1>LoanFlow</h1>
+                    </div>
+                    
+                    <nav>
+                        <ul>
+                            <li><a href="#" class="nav-dashboard active">Dashboard</a></li>
+                            <li><a href="#" class="nav-loans">Loans</a></li>
+                            <li><a href="#" class="nav-payments">Payments</a></li>
+                            <li><a href="#" class="nav-reports">Reports</a></li>
+                            <li><a href="#" class="nav-settings">Settings</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="user-actions">
+                        <button class="btn btn-outline"><i class="fas fa-bell"></i></button>
+                        <button class="btn btn-primary"><i class="fas fa-user"></i> <span id="current-user">Lender</span></button>
+                        <button class="btn btn-outline" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container main-content">
+            <div class="dashboard">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="user-profile">
+                        <div class="user-avatar" id="user-avatar">L</div>
+                        <div class="user-info">
+                            <h3 id="user-name">John Lender</h3>
+                            <p id="user-role">Lender</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="sidebar-menu" id="sidebar-menu">
+                        <!-- Menu items will be dynamically populated -->
+                    </ul>
+                </div>
+                
+                <!-- Dashboard Content -->
+                <div class="dashboard-main">
+                    <!-- Lender Dashboard -->
+                    <div id="lender-dashboard" class="role-dashboard">
+                        <!-- Dashboard Section -->
+                        <div class="section-content active" id="lender-dashboard-content">
+                            <!-- Stats Cards -->
+                            <div class="dashboard-content">
+                                <div class="card stat-card">
+                                    <div class="stat-icon primary">
+                                        <i class="fas fa-dollar-sign"></i>
+                                    </div>
+                                    <h3>$24,580</h3>
+                                    <p>Total Loan Portfolio</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon success">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <h3>18</h3>
+                                    <p>Active Loans</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon warning">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <h3>7</h3>
+                                    <p>Pending Applications</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon danger">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h3>3</h3>
+                                    <p>Overdue Payments</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Recent Activity and Loan Applications -->
+                            <div class="dashboard-content" style="grid-template-columns: 2fr 1fr;">
+                                <div class="card">
+                                    <h2 class="card-title">Recent Loan Applications</h2>
+                                    <div class="table-container">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Applicant</th>
+                                                    <th>Amount</th>
+                                                    <th>Date</th>
+                                                    <th>Status</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Sarah Johnson</td>
+                                                    <td>$5,000</td>
+                                                    <td>Oct 12, 2023</td>
+                                                    <td><span class="status pending">Pending</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm approve-btn">Approve</button>
+                                                        <button class="btn btn-danger btn-sm reject-btn">Reject</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Michael Chen</td>
+                                                    <td>$12,000</td>
+                                                    <td>Oct 10, 2023</td>
+                                                    <td><span class="status approved">Approved</span></td>
+                                                    <td><button class="btn btn-primary">View</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Emma Wilson</td>
+                                                    <td>$7,500</td>
+                                                    <td>Oct 8, 2023</td>
+                                                    <td><span class="status rejected">Rejected</span></td>
+                                                    <td><button class="btn btn-primary">View</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Robert Brown</td>
+                                                    <td>$15,000</td>
+                                                    <td>Oct 5, 2023</td>
+                                                    <td><span class="status pending">Pending</span></td>
+                                                    <td>
+                                                        <button class="btn btn-success btn-sm approve-btn">Approve</button>
+                                                        <button class="btn btn-danger btn-sm reject-btn">Reject</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="card">
+                                    <h2 class="card-title">Quick Actions</h2>
+                                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                                        <button class="btn btn-primary" style="justify-content: flex-start; text-align: left;">
+                                            <i class="fas fa-plus-circle"></i> Create New Loan Offer
+                                        </button>
+                                        <button class="btn btn-primary" style="justify-content: flex-start; text-align: left;">
+                                            <i class="fas fa-user-plus"></i> Add New Borrower
+                                        </button>
+                                        <button class="btn btn-primary" style="justify-content: flex-start; text-align: left;">
+                                            <i class="fas fa-file-export"></i> Generate Report
+                                        </button>
+                                        <button class="btn btn-primary" style="justify-content: flex-start; text-align: left;">
+                                            <i class="fas fa-calculator"></i> Payment Calculator
+                                        </button>
+                                    </div>
+                                    
+                                    <h2 class="card-title" style="margin-top: 20px;">Upcoming Payments</h2>
+                                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                                        <div style="display: flex; justify-content: space-between; padding: 10px; background: #f8f9fa; border-radius: 4px;">
+                                            <div>
+                                                <p style="font-weight: 500;">David Miller</p>
+                                                <p style="font-size: 0.8rem; color: #777;">Due: Oct 15, 2023</p>
+                                            </div>
+                                            <div style="text-align: right;">
+                                                <p style="font-weight: 500;">$450</p>
+                                                <p style="font-size: 0.8rem; color: #777;">Principal + Interest</p>
+                                            </div>
+                                        </div>
+                                        <div style="display: flex; justify-content: space-between; padding: 10px; background: #f8f9fa; border-radius: 4px;">
+                                            <div>
+                                                <p style="font-weight: 500;">Lisa Thompson</p>
+                                                <p style="font-size: 0.8rem; color: #777;">Due: Oct 18, 2023</p>
+                                            </div>
+                                            <div style="text-align: right;">
+                                                <p style="font-weight: 500;">$320</p>
+                                                <p style="font-size: 0.8rem; color: #777;">Principal + Interest</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Loan Applications Section -->
+                        <div class="section-content" id="lender-applications-content">
+                            <div class="card">
+                                <h2 class="card-title">Loan Applications</h2>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Application ID</th>
+                                                <th>Applicant</th>
+                                                <th>Loan Amount</th>
+                                                <th>Applied Date</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>APP-001</td>
+                                                <td>Sarah Johnson</td>
+                                                <td>$5,000</td>
+                                                <td>Oct 12, 2023</td>
+                                                <td><span class="status pending">Pending</span></td>
+                                                <td>
+                                                    <button class="btn btn-success btn-sm">Approve</button>
+                                                    <button class="btn btn-danger btn-sm">Reject</button>
+                                                    <button class="btn btn-primary btn-sm">View Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>APP-002</td>
+                                                <td>Michael Chen</td>
+                                                <td>$12,000</td>
+                                                <td>Oct 10, 2023</td>
+                                                <td><span class="status approved">Approved</span></td>
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm">View Details</button>
+                                                <button class="btn btn-warning btn-sm">Generate Contract</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Active Loans Section -->
+                        <div class="section-content" id="lender-loans-content">
+                            <div class="card">
+                                <h2 class="card-title">Active Loans</h2>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Loan ID</th>
+                                                <th>Borrower</th>
+                                                <th>Loan Amount</th>
+                                                <th>Disbursed Date</th>
+                                                <th>Interest Rate</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>LN-001</td>
+                                                <td>David Miller</td>
+                                                <td>$10,000</td>
+                                                <td>Sep 15, 2023</td>
+                                                <td>5.5%</td>
+                                                <td><span class="status active">Active</span></td>
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm">View Details</button>
+                                                    <button class="btn btn-warning btn-sm">Payment History</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>LN-002</td>
+                                                <td>Lisa Thompson</td>
+                                                <td>$7,500</td>
+                                                <td>Aug 22, 2023</td>
+                                                <td>6.2%</td>
+                                                <td><span class="status active">Active</span></td>
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm">View Details</button>
+                                                    <button class="btn btn-warning btn-sm">Payment History</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Payment History Section -->
+                        <div class="section-content" id="lender-payments-content">
+                            <div class="card">
+                                <h2 class="card-title">Payment History</h2>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Payment ID</th>
+                                                <th>Borrower</th>
+                                                <th>Loan ID</th>
+                                                <th>Amount</th>
+                                                <th>Due Date</th>
+                                                <th>Paid Date</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>PMT-001</td>
+                                                <td>David Miller</td>
+                                                <td>LN-001</td>
+                                                <td>$450</td>
+                                                <td>Oct 15, 2023</td>
+                                                <td>Oct 14, 2023</td>
+                                                <td><span class="status paid">Paid</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>PMT-002</td>
+                                                <td>Lisa Thompson</td>
+                                                <td>LN-002</td>
+                                                <td>$320</td>
+                                                <td>Oct 18, 2023</td>
+                                                <td>-</td>
+                                                <td><span class="status pending">Pending</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Analytics Section -->
+                        <div class="section-content" id="lender-analytics-content">
+                            <div class="card">
+                                <h2 class="card-title">Portfolio Analytics</h2>
+                                <div class="chart-container">
+                                    <canvas id="lenderPerformanceChart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-content">
+                                <div class="card">
+                                    <h2 class="card-title">Loan Distribution</h2>
+                                    <div class="chart-container">
+                                        <canvas id="loanDistributionChart"></canvas>
+                                    </div>
+                                </div>
+                                
+                                <div class="card">
+                                    <h2 class="card-title">Risk Analysis</h2>
+                                    <div class="chart-container">
+                                        <canvas id="riskAnalysisChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Settings Section -->
+                        <div class="section-content" id="lender-settings-content">
+                            <div class="card">
+                                <h2 class="card-title">Account Settings</h2>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="lender-name">Full Name</label>
+                                        <input type="text" id="lender-name" value="John Lender">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lender-email">Email Address</label>
+                                        <input type="email" id="lender-email" value="lender@loanflow.com">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="lender-phone">Phone Number</label>
+                                        <input type="text" id="lender-phone" value="+1 (555) 123-4567">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lender-company">Company</label>
+                                        <input type="text" id="lender-company" value="Prime Lending Co.">
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">Save Changes</button>
+                            </div>
+                            
+                            <div class="card">
+                                <h2 class="card-title">Notification Preferences</h2>
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" checked> Email notifications for new applications
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" checked> SMS alerts for overdue payments
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox"> Monthly portfolio reports
+                                    </label>
+                                </div>
+                                <button class="btn btn-primary">Update Preferences</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Borrower Dashboard -->
+                    <div id="borrower-dashboard" class="role-dashboard hidden">
+                        <!-- Dashboard Section -->
+                        <div class="section-content active" id="borrower-dashboard-content">
+                            <div class="dashboard-content">
+                                <div class="card stat-card">
+                                    <div class="stat-icon primary">
+                                        <i class="fas fa-hand-holding-usd"></i>
+                                    </div>
+                                    <h3>$15,000</h3>
+                                    <p>Current Loan Balance</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon success">
+                                        <i class="fas fa-calendar-check"></i>
+                                    </div>
+                                    <h3>24</h3>
+                                    <p>Payments Made</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon warning">
+                                        <i class="fas fa-calendar-day"></i>
+                                    </div>
+                                    <h3>12</h3>
+                                    <p>Remaining Payments</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon danger">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                    </div>
+                                    <h3>0</h3>
+                                    <p>Late Payments</p>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <h2 class="card-title">Active Loan Details</h2>
+                                <div class="dashboard-content">
+                                    <div class="card">
+                                        <h3>Loan Summary</h3>
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                                            <div>
+                                                <p><strong>Loan Amount:</strong> $15,000</p>
+                                                <p><strong>Interest Rate:</strong> 5.5%</p>
+                                                <p><strong>Loan Term:</strong> 36 months</p>
+                                            </div>
+                                            <div>
+                                                <p><strong>Monthly Payment:</strong> $453</p>
+                                                <p><strong>Next Due Date:</strong> Nov 15, 2023</p>
+                                                <p><strong>Remaining Balance:</strong> $8,450</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card">
+                                        <h3>Quick Actions</h3>
+                                        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+                                            <button class="btn btn-primary">Make a Payment</button>
+                                            <button class="btn btn-outline">View Payment History</button>
+                                            <button class="btn btn-outline">Download Statements</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Browse Loans Section -->
+                        <div class="section-content" id="borrower-browse-content">
+                            <div class="card">
+                                <h2 class="card-title">Available Loan Offers</h2>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Lender</th>
+                                                <th>Amount Range</th>
+                                                <th>Interest Rate</th>
+                                                <th>Tenure</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Prime Lending Co.</td>
+                                                <td>$5,000 - $50,000</td>
+                                                <td>5.5%</td>
+                                                <td>12-36 months</td>
+                                                <td><button class="btn btn-primary apply-btn">Apply</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>QuickCash Inc.</td>
+                                                <td>$1,000 - $25,000</td>
+                                                <td>7.2%</td>
+                                                <td>6-24 months</td>
+                                                <td><button class="btn btn-primary apply-btn">Apply</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>SecureFunds LLC</td>
+                                                <td>$10,000 - $100,000</td>
+                                                <td>4.8%</td>
+                                                <td>24-60 months</td>
+                                                <td><button class="btn btn-primary apply-btn">Apply</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- My Applications Section -->
+                        <div class="section-content" id="borrower-applications-content">
+                            <div class="card">
+                                <h2 class="card-title">My Loan Applications</h2>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Application ID</th>
+                                                <th>Lender</th>
+                                                <th>Amount</th>
+                                                <th>Applied Date</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>APP-005</td>
+                                                <td>Prime Lending Co.</td>
+                                                <td>$15,000</td>
+                                                <td>Oct 5, 2023</td>
+                                                <td><span class="status approved">Approved</span></td>
+                                                <td><button class="btn btn-primary">View Details</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>APP-003</td>
+                                                <td>QuickCash Inc.</td>
+                                                <td>$8,000</td>
+                                                <td>Sep 18, 2023</td>
+                                                <td><span class="status rejected">Rejected</span></td>
+                                                <td><button class="btn btn-primary">View Details</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Payment Schedule Section -->
+                        <div class="section-content" id="borrower-schedule-content">
+                            <div class="card">
+                                <h2 class="card-title">Your Payment Schedule</h2>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Due Date</th>
+                                                <th>Amount</th>
+                                                <th>Principal</th>
+                                                <th>Interest</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Nov 15, 2023</td>
+                                                <td>$450.00</td>
+                                                <td>$350.00</td>
+                                                <td>$100.00</td>
+                                                <td><span class="status pending">Pending</span></td>
+                                                <td><button class="btn btn-primary pay-btn">Pay Now</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Oct 15, 2023</td>
+                                                <td>$450.00</td>
+                                                <td>$347.50</td>
+                                                <td>$102.50</td>
+                                                <td><span class="status paid">Paid</span></td>
+                                                <td><button class="btn btn-outline" disabled>Paid</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sep 15, 2023</td>
+                                                <td>$450.00</td>
+                                                <td>$345.00</td>
+                                                <td>$105.00</td>
+                                                <td><span class="status paid">Paid</span></td>
+                                                <td><button class="btn btn-outline" disabled>Paid</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Payment History Section -->
+                        <div class="section-content" id="borrower-payments-content">
+                            <div class="card">
+                                <h2 class="card-title">Payment History</h2>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Payment ID</th>
+                                                <th>Date</th>
+                                                <th>Amount</th>
+                                                <th>Method</th>
+                                                <th>Status</th>
+                                                <th>Receipt</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>PMT-045</td>
+                                                <td>Oct 14, 2023</td>
+                                                <td>$450.00</td>
+                                                <td>Bank Transfer</td>
+                                                <td><span class="status paid">Completed</span></td>
+                                                <td><button class="btn btn-outline">Download</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>PMT-044</td>
+                                                <td>Sep 13, 2023</td>
+                                                <td>$450.00</td>
+                                                <td>Credit Card</td>
+                                                <td><span class="status paid">Completed</span></td>
+                                                <td><button class="btn btn-outline">Download</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Profile Section -->
+                        <div class="section-content" id="borrower-profile-content">
+                            <div class="card">
+                                <h2 class="card-title">Personal Information</h2>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="borrower-name">Full Name</label>
+                                        <input type="text" id="borrower-name" value="Sarah Borrower">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="borrower-email">Email Address</label>
+                                        <input type="email" id="borrower-email" value="borrower@loanflow.com">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="borrower-phone">Phone Number</label>
+                                        <input type="text" id="borrower-phone" value="+1 (555) 987-6543">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="borrower-address">Address</label>
+                                        <input type="text" id="borrower-address" value="123 Main St, New York, NY">
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary">Save Changes</button>
+                            </div>
+                            
+                            <div class="card">
+                                <h2 class="card-title">Employment Information</h2>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="borrower-company">Employer</label>
+                                        <input type="text" id="borrower-company" value="Tech Solutions Inc.">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="borrower-income">Annual Income</label>
+                                        <input type="text" id="borrower-income" value="$75,000">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="borrower-position">Position</label>
+                                    <input type="text" id="borrower-position" value="Software Developer">
+                                </div>
+                                <button class="btn btn-primary">Update Information</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Admin Dashboard -->
+                    <div id="admin-dashboard" class="role-dashboard hidden">
+                        <!-- Dashboard Section -->
+                        <div class="section-content active" id="admin-dashboard-content">
+                            <div class="dashboard-content">
+                                <div class="card stat-card">
+                                    <div class="stat-icon primary">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h3>142</h3>
+                                    <p>Total Users</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon success">
+                                        <i class="fas fa-file-contract"></i>
+                                    </div>
+                                    <h3>67</h3>
+                                    <p>Active Loans</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon warning">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h3>98.7%</h3>
+                                    <p>System Uptime</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon danger">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h3>3</h3>
+                                    <p>Security Alerts</p>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <h2 class="card-title">System Overview</h2>
+                                <div class="chart-container">
+                                    <canvas id="systemChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- User Management Section -->
+                        <div class="section-content" id="admin-users-content">
+                            <div class="card">
+                                <h2 class="card-title">User Management</h2>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Role</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>John Lender</td>
+                                                <td>john@example.com</td>
+                                                <td>Lender</td>
+                                                <td><span class="status active">Active</span></td>
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sarah Borrower</td>
+                                                <td>sarah@example.com</td>
+                                                <td>Borrower</td>
+                                                <td><span class="status active">Active</span></td>
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mike Analyst</td>
+                                                <td>mike@example.com</td>
+                                                <td>Analyst</td>
+                                                <td><span class="status active">Active</span></td>
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm">Edit</button>
+                                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button class="btn btn-primary" style="margin-top: 15px;">
+                                    <i class="fas fa-user-plus"></i> Add New User
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Security Section -->
+                        <div class="section-content" id="admin-security-content">
+                            <div class="card">
+                                <h2 class="card-title">Security Logs</h2>
+                                <div class="security-logs">
+                                    <div class="log-entry">
+                                        <p><strong>User login:</strong> lender@loanflow.com</p>
+                                        <p class="log-time">2023-10-15 14:30:22</p>
+                                    </div>
+                                    <div class="log-entry">
+                                        <p><strong>Failed login attempt:</strong> unknown@example.com</p>
+                                        <p class="log-time">2023-10-15 13:15:08</p>
+                                    </div>
+                                    <div class="log-entry">
+                                        <p><strong>Password changed:</strong> admin@loanflow.com</p>
+                                        <p class="log-time">2023-10-14 09:45:33</p>
+                                    </div>
+                                    <div class="log-entry">
+                                        <p><strong>New user registered:</strong> borrower@loanflow.com</p>
+                                        <p class="log-time">2023-10-13 16:20:17</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <h2 class="card-title">Security Settings</h2>
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" checked> Enable two-factor authentication
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox" checked> Require strong passwords
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        <input type="checkbox"> Auto-lock inactive accounts after 30 days
+                                    </label>
+                                </div>
+                                <button class="btn btn-primary">Save Security Settings</button>
+                            </div>
+                        </div>
+                        
+                        <!-- System Settings Section -->
+                        <div class="section-content" id="admin-settings-content">
+                            <div class="card">
+                                <h2 class="card-title">System Configuration</h2>
+                                <div class="form-group">
+                                    <label for="system-name">System Name</label>
+                                    <input type="text" id="system-name" value="LoanFlow">
+                                </div>
+                                <div class="form-group">
+                                    <label for="system-email">System Email</label>
+                                    <input type="email" id="system-email" value="noreply@loanflow.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="system-currency">Default Currency</label>
+                                    <select id="system-currency">
+                                        <option value="USD" selected>US Dollar (USD)</option>
+                                        <option value="EUR">Euro (EUR)</option>
+                                        <option value="GBP">British Pound (GBP)</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary">Save Configuration</button>
+                            </div>
+                            
+                            <div class="card">
+                                <h2 class="card-title">Email Templates</h2>
+                                <div class="form-group">
+                                    <label for="email-welcome">Welcome Email Template</label>
+                                    <textarea id="email-welcome" rows="4">Welcome to LoanFlow! We're excited to have you on board.</textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email-payment">Payment Reminder Template</label>
+                                    <textarea id="email-payment" rows="4">Friendly reminder: Your loan payment is due soon.</textarea>
+                                </div>
+                                <button class="btn btn-primary">Update Templates</button>
+                            </div>
+                        </div>
+                        
+                        <!-- System Analytics Section -->
+                        <div class="section-content" id="admin-analytics-content">
+                            <div class="card">
+                                <h2 class="card-title">Platform Usage Analytics</h2>
+                                <div class="chart-container">
+                                    <canvas id="usageChart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-content">
+                                <div class="card">
+                                    <h2 class="card-title">User Distribution</h2>
+                                    <div class="chart-container">
+                                        <canvas id="userDistributionChart"></canvas>
+                                    </div>
+                                </div>
+                                
+                                <div class="card">
+                                    <h2 class="card-title">Performance Metrics</h2>
+                                    <div class="chart-container">
+                                        <canvas id="performanceMetricsChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Analyst Dashboard -->
+                    <div id="analyst-dashboard" class="role-dashboard hidden">
+                        <!-- Dashboard Section -->
+                        <div class="section-content active" id="analyst-dashboard-content">
+                            <div class="dashboard-content">
+                                <div class="card stat-card">
+                                    <div class="stat-icon primary">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h3>$2.4M</h3>
+                                    <p>Total Portfolio</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon success">
+                                        <i class="fas fa-percentage"></i>
+                                    </div>
+                                    <h3>4.8%</h3>
+                                    <p>Avg. Interest Rate</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon warning">
+                                        <i class="fas fa-user-times"></i>
+                                    </div>
+                                    <h3>2.3%</h3>
+                                    <p>Default Rate</p>
+                                </div>
+                                
+                                <div class="card stat-card">
+                                    <div class="stat-icon danger">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h3>12</h3>
+                                    <p>High-Risk Loans</p>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <h2 class="card-title">Portfolio Performance</h2>
+                                <div class="chart-container">
+                                    <canvas id="performanceChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Portfolio Analytics Section -->
+                        <div class="section-content" id="analytics-portfolio-content">
+                            <div class="card">
+                                <h2 class="card-title">Portfolio Composition</h2>
+                                <div class="chart-container">
+                                    <canvas id="portfolioCompositionChart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-content">
+                                <div class="card">
+                                    <h2 class="card-title">Loan Distribution by Amount</h2>
+                                    <div class="chart-container">
+                                        <canvas id="loanAmountChart"></canvas>
+                                    </div>
+                                </div>
+                                
+                                <div class="card">
+                                    <h2 class="card-title">Interest Rate Distribution</h2>
+                                    <div class="chart-container">
+                                        <canvas id="interestRateChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Risk Analysis Section -->
+                        <div class="section-content" id="analytics-risk-content">
+                            <div class="card">
+                                <h2 class="card-title">Risk Analysis Report</h2>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Loan ID</th>
+                                                <th>Borrower</th>
+                                                <th>Amount</th>
+                                                <th>Risk Score</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>LN-7842</td>
+                                                <td>Robert Johnson</td>
+                                                <td>$25,000</td>
+                                                <td>82/100</td>
+                                                <td><span class="status danger">High Risk</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>LN-6521</td>
+                                                <td>Lisa Thompson</td>
+                                                <td>$12,500</td>
+                                                <td>45/100</td>
+                                                <td><span class="status success">Low Risk</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>LN-8934</td>
+                                                <td>Michael Chen</td>
+                                                <td>$18,000</td>
+                                                <td>68/100</td>
+                                                <td><span class="status warning">Medium Risk</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button class="btn btn-primary" style="margin-top: 15px;">
+                                    <i class="fas fa-download"></i> Download Full Report
+                                </button>
+                            </div>
+                            
+                            <div class="card">
+                                <h2 class="card-title">Risk Distribution</h2>
+                                <div class="chart-container">
+                                    <canvas id="riskDistributionChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Reports Section -->
+                        <div class="section-content" id="analytics-reports-content">
+                            <div class="card">
+                                <h2 class="card-title">Generate Reports</h2>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="report-type">Report Type</label>
+                                        <select id="report-type">
+                                            <option value="portfolio">Portfolio Summary</option>
+                                            <option value="risk">Risk Analysis</option>
+                                            <option value="performance">Performance Metrics</option>
+                                            <option value="default">Default Analysis</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="report-period">Time Period</label>
+                                        <select id="report-period">
+                                            <option value="monthly">Last Month</option>
+                                            <option value="quarterly">Last Quarter</option>
+                                            <option value="yearly">Last Year</option>
+                                            <option value="custom">Custom Range</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="report-format">Output Format</label>
+                                    <select id="report-format">
+                                        <option value="pdf">PDF</option>
+                                        <option value="excel">Excel</option>
+                                        <option value="csv">CSV</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary">Generate Report</button>
+                            </div>
+                            
+                            <div class="card">
+                                <h2 class="card-title">Recent Reports</h2>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Report Name</th>
+                                                <th>Generated On</th>
+                                                <th>Type</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Q3 Portfolio Summary</td>
+                                                <td>Oct 10, 2023</td>
+                                                <td>PDF</td>
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm">Download</button>
+                                                    <button class="btn btn-outline btn-sm">Share</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Risk Analysis - September</td>
+                                                <td>Oct 1, 2023</td>
+                                                <td>Excel</td>
+                                                <td>
+                                                    <button class="btn btn-primary btn-sm">Download</button>
+                                                    <button class="btn btn-outline btn-sm">Share</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Data Management Section -->
+                        <div class="section-content" id="analytics-data-content">
+                            <div class="card">
+                                <h2 class="card-title">Data Sources</h2>
+                                <div class="table-container">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Source</th>
+                                                <th>Type</th>
+                                                <th>Last Updated</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Loan Applications</td>
+                                                <td>Database</td>
+                                                <td>Today, 09:45 AM</td>
+                                                <td><span class="status success">Active</span></td>
+                                                <td><button class="btn btn-primary btn-sm">Refresh</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Payment Records</td>
+                                                <td>Database</td>
+                                                <td>Today, 08:30 AM</td>
+                                                <td><span class="status success">Active</span></td>
+                                                <td><button class="btn btn-primary btn-sm">Refresh</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Credit Bureau</td>
+                                                <td>API</td>
+                                                <td>Yesterday, 05:15 PM</td>
+                                                <td><span class="status success">Active</span></td>
+                                                <td><button class="btn btn-primary btn-sm">Test Connection</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <h2 class="card-title">Data Export</h2>
+                                <div class="form-group">
+                                    <label for="export-data">Select Data to Export</label>
+                                    <select id="export-data">
+                                        <option value="loans">Loan Portfolio</option>
+                                        <option value="payments">Payment History</option>
+                                        <option value="applications">Loan Applications</option>
+                                        <option value="users">User Data</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="export-format">Export Format</label>
+                                    <select id="export-format">
+                                        <option value="csv">CSV</option>
+                                        <option value="excel">Excel</option>
+                                        <option value="json">JSON</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary">Export Data</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Loan Workflow Diagram -->
+                    <div class="card">
+                        <h2 class="card-title">Loan Issuance Workflow</h2>
+                        <div class="workflow">
+                            <div class="workflow-step">
+                                <div class="workflow-circle">1</div>
+                                <p>Admin Setup</p>
+                            </div>
+                            <div class="workflow-step">
+                                <div class="workflow-circle">2</div>
+                                <p>Lender Creates Offer</p>
+                            </div>
+                            <div class="workflow-step">
+                                <div class="workflow-circle">3</div>
+                                <p>Borrower Applies</p>
+                            </div>
+                            <div class="workflow-step">
+                                <div class="workflow-circle">4</div>
+                                <p>Lender Reviews</p>
+                            </div>
+                            <div class="workflow-step">
+                                <div class="workflow-circle">5</div>
+                                <p>System Generates EMI</p>
+                            </div>
+                            <div class="workflow-step">
+                                <div class="workflow-circle">6</div>
+                                <p>Borrower Pays</p>
+                            </div>
+                            <div class="workflow-step">
+                                <div class="workflow-circle">7</div>
+                                <p>Analyst Reports</p>
+                            </div>
+                            <div class="workflow-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Loan Calculator -->
+                    <div class="card">
+                        <h2 class="card-title">Loan Payment Calculator</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="calc-loan-amount">Loan Amount ($)</label>
+                                <input type="number" id="calc-loan-amount" value="10000">
+                            </div>
+                            <div class="form-group">
+                                <label for="calc-interest-rate">Interest Rate (%)</label>
+                                <input type="number" id="calc-interest-rate" value="5.5" step="0.1">
+                            </div>
+                            <div class="form-group">
+                                <label for="calc-loan-term">Loan Term (months)</label>
+                                <input type="number" id="calc-loan-term" value="36">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" id="calculate-btn">Calculate Payment</button>
+                        
+                        <div id="calculation-result" style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 4px; display: none;">
+                            <h3>Payment Details</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+                                <div>
+                                    <p>Monthly Payment:</p>
+                                    <p style="font-weight: 500; font-size: 1.2rem;" id="monthly-payment">$299.71</p>
+                                </div>
+                                <div>
+                                    <p>Total Interest:</p>
+                                    <p style="font-weight: 500;" id="total-interest">$789.56</p>
+                                </div>
+                                <div>
+                                    <p>Total Payment:</p>
+                                    <p style="font-weight: 500;" id="total-payment">$10,789.56</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="LF.js"></script>
+</body>
+</html>
